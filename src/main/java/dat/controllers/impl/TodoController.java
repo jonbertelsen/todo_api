@@ -76,9 +76,9 @@ public class TodoController implements IController<TodoDTO, Integer> {
     @Override
     public void delete(Context ctx) throws ApiException {
         try {
-            UserDTO user = ctx.attribute("user");
+            UserDTO userDTO = ctx.attribute("user");
             int id = Integer.parseInt(ctx.pathParam("id"));
-            dao.delete(id, user);
+            dao.delete(id, userDTO);
             ctx.res().setStatus(204);
         }
         catch (NumberFormatException e) {

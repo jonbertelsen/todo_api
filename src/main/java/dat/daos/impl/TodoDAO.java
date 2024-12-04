@@ -91,7 +91,7 @@ public class TodoDAO implements IDAO<TodoDTO, Integer> {
         }
     }
 
-    public void delete(Integer integer, User user) throws ApiException {
+    public void delete(Integer integer, UserDTO user) throws ApiException {
         try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
             Todo todo = em.find(Todo.class, integer);
