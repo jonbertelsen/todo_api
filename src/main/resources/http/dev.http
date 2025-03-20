@@ -16,8 +16,8 @@ POST {{url}}/auth/register/
 POST {{url}}/auth/login/
 
 {
-    "username": "user",
-    "password": "test123"
+    "username": "usertest",
+    "password": "user123"
 }
 
 > {%
@@ -85,4 +85,3 @@ Authorization: Bearer {{jwt_token}}
 ###
 DELETE {{url}}/todos/1
 Authorization: Bearer {{jwt_token}}
-
